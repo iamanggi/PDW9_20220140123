@@ -22,5 +22,5 @@ Website ini digunakan untuk pendaftaran pasien baru dan lama secara online di ru
 
 
 ## 🔗 Links github pages
-
+https://iamanggi.github.io/PDW9_20220140123/
 
