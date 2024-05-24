@@ -67,15 +67,14 @@
 
     <script>
     document.getElementById('registrationFormlama').addEventListener('submit', function(event) {
-    event.preventDefault(); // Mencegah pengiriman formulir
+    event.preventDefault(); 
 
-    // Mengambil data dari formulir
     const NO_RM = document.getElementById('NO_RM').value;
     const Tgl_lahir = document.getElementById('Tgl_lahir').value;
     const Cr_Byr = document.getElementById('Cr_Byr').value;
     const Wkt_pendaftaran = document.querySelector('input[name="Wkt_pendaftaran"]:checked').value;
 
-    // Menampilkan popup konfirmasi menggunakan SweetAlert
+
     Swal.fire({
         title: 'Konfirmasi Pendaftaran',
         html: `
@@ -108,17 +107,17 @@
         cancelButtonText: 'Batal'
     }).then((result) => {
         if (result.isConfirmed) {
-            // Jika pengguna mengkonfirmasi, tampilkan pesan sukses
+
             Swal.fire({
                 title: 'Pendaftaran Berhasil!',
                 text: 'Data pendaftaran Anda telah berhasil disimpan.',
                 icon: 'success'
             }).then(() => {
-                // Kirim formulir setelah menampilkan pesan sukses
+
                 document.getElementById('registrationFormlama').submit();
             });
         } else {
-            // Jika pengguna membatalkan, tampilkan pesan kekecewaan
+
             Swal.fire({
                 title: 'Pendaftaran Dibatalkan',
                 text: 'Terima kasih atas keputusannya. Semoga tetap sehat dan sejahtera. Jika butuh kami di lain waktu, silakan hubungi.',
