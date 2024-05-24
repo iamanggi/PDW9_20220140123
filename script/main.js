@@ -1,7 +1,7 @@
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Mencegah pengiriman formulir
+    event.preventDefault(); 
 
-    // Mengambil data dari formulir
+
     const nik = document.getElementById('nik').value;
     const nama = document.getElementById('nama').value;
     const tempatLahir = document.getElementById('tempat_lahir').value;
@@ -12,7 +12,6 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     const caraBayar = document.getElementById('cara_bayar').value;
     const waktuPendaftaran = document.querySelector('input[name="waktu_pendaftaran"]:checked').value;
 
-    // Menampilkan popup konfirmasi menggunakan SweetAlert
     Swal.fire({
         title: 'Konfirmasi Pendaftaran',
         html: `
@@ -65,17 +64,17 @@ document.getElementById('registrationForm').addEventListener('submit', function(
         cancelButtonText: 'Batal'
     }).then((result) => {
         if (result.isConfirmed) {
-            // Jika pengguna mengkonfirmasi, tampilkan pesan sukses
+
             Swal.fire({
                 title: 'Pendaftaran Berhasil!',
                 text: 'Data pendaftaran Anda telah berhasil disimpan.',
                 icon: 'success'
             }).then(() => {
-                // Kirim formulir setelah menampilkan pesan sukses
+
                 document.getElementById('registrationForm').submit();
             });
         } else {
-            // Jika pengguna membatalkan, tampilkan pesan kekecewaan
+
             Swal.fire({
                 title: 'Pendaftaran Dibatalkan',
                 text: 'Terima kasih atas keputusannya. Semoga tetap sehat dan sejahtera. Jika butuh kami di lain waktu, silakan hubungi.',
